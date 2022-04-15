@@ -1,6 +1,30 @@
-@media ( max-width: 992px  )
+@media ( max-width: 1140px  )
   .container
     padding: 0 50px
+  .about
+    &__block
+      width: 920px
+@media ( max-width: 992px  )
+  .container
+    padding: 0 30px
+  .about
+    padding: 60px 0 50px 0
+    &__title
+      margin-bottom: 50px
+    &__block
+      width: 700px
+    &__icon
+      width: 60px
+      height: 60px
+      margin-bottom: 20px
+      img
+        width: 100%
+    &__subtitle
+      margin-bottom: 10px
+    &__desc
+      max-width: 200px
+      font-size: 14px
+      line-height: 16px
 @media ( max-width: 768px  )
   .container
     padding: 0 20px
@@ -19,6 +43,21 @@
   .header
     &__oficial
       display: none
+  .about
+    padding: 50px 0 40px 0
+    &__title
+      font-size: 25px
+      margin-bottom: 50px
+    &__block
+      width: 500px
+      flex-wrap: wrap
+    &__item
+      margin-bottom: 20px
+      &:nth-last-child(1)
+        width: 100%
+        margin-bottom: 0
+    &__desc
+      max-width: 220px
 
 @media ( max-width: 567px  )
   .container
@@ -54,3 +93,19 @@
       font-weight: 500
       font-size: 14px
       margin-bottom: 20px
+  .about
+    padding: 40px 0 30px 0
+    &__title
+      font-size: 20px
+      margin-bottom: 30px
+    &__block
+      width: 300px
+    &__item
+      width: 100%
+      margin-bottom: 30px
+    &__icon
+      margin-bottom: 10px
+    &__subtitle
+      line-height: 18px
+    &__desc
+      max-width: 220px
