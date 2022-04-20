@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RunSmart</title>
   <!--Поменять титульник-->
+  <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://kit.fontawesome.com/036884560e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <section class="promo">
+  <section class="promo" id="up">
     <div class="container">
       <div class="header">
-        <a href="#" class="header__logo">
+        <a href="#catalog" class="header__logo">
           <img src="img/main-logo.png" alt="logo">
         </a>
         <div class="header__oficial">
@@ -27,7 +27,7 @@
         </div>
         <div class="header__phone">
           <a href="tel:+74999228974" class="header__number">+7 (499) 922-89-74</a>
-          <button class="button button--header">заказать звонок</button>
+          <button data-modal="consultation" class="button button--header">заказать звонок</button>
         </div>
         <a href="tel:+74999228974" class="header__mobile">
         </a>
@@ -49,7 +49,7 @@
             <div class="services__desc">Ответим на все вопросы</div>
           </div>
         </div>
-        <button class="button button--main">заказать кОНСУЛЬТАЦИЮ</button>
+        <button data-modal="consultation" class="button button--main">заказать кОНСУЛЬТАЦИЮ</button>
         <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
       </div>
 
@@ -63,7 +63,7 @@
           <div class="about__icon">
             <img src="img/icons/cup.png" alt="cup">
           </div>
-          <h5 class="about__subtitle">Делимся опытом</h5>
+          <h3 class="about__subtitle">Делимся опытом</h3>
           <span class="about__desc">Наши сотрудники всегда готовы поделиться своим опытом, <br> так как сами бегают
             полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</span>
         </div>
@@ -71,7 +71,7 @@
           <div class="about__icon">
             <img src="img/icons/heart.png" alt="heart">
           </div>
-          <h5 class="about__subtitle">Заботимся о здоровье</h5>
+          <h3 class="about__subtitle">Заботимся о здоровье</h3>
           <span class="about__desc">Мы работаем для того, <br> чтобы Ваши занятия спортом шли на пользу Вашему здоровью
             и
             были в радость Вам и Вашим близким!</span>
@@ -80,7 +80,7 @@
           <div class="about__icon">
             <img src="img/icons/shoe.png" alt="shoe">
           </div>
-          <h5 class="about__subtitle">Учим бегать</h5>
+          <h3 class="about__subtitle">Учим бегать</h3>
           <span class="about__desc">Помогаем с обучением <br> правильной технике бега! <br> Дружим с крупнейшей школой
             бега в
             России - <a href="https://ilovesupersport.com/running" class="about__link">I LOVE RUNNING</a>.</span>
@@ -92,15 +92,15 @@
     <div class="container">
       <h2 class="consultation__title">Получите бесплатную консультацию <br> по подбору пульсометра </h2>
       <span class="consultation__desc">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</span>
-      <form action="#" class="form-order">
+      <form action="smart.php" method="POST" class="form-order" id="consultation-form">
         <input name="name" required placeholder="Ваше имя" type="text">
         <input name="phone" required placeholder="Ваш телефон" type="tel">
-        <input name="e-mail" required placeholder="Ваш E-mail" type="email">
+        <input name="email" required placeholder="Ваш E-mail" type="email">
         <button class="button button--submit">заказать кОНСУЛЬТАЦИЮ</button>
       </form>
     </div>
   </div>
-  <section class="carusel">
+  <div class="carusel">
     <div class="container">
       <div class="slider">
         <div class="slider__item"><img src="img/bg/slide-1.png" alt=""></div>
@@ -108,8 +108,8 @@
         <div class="slider__item"><img src="img/bg/slide-3.png" alt=""></div>
       </div>
     </div>
-  </section>
-  <section class="catalog">
+  </div>
+  <section class="catalog" id="catalog">
     <div class="container">
       <h2 class="catalog__title">Каталог пульсометров</h2>
       <ul class="tabs">
@@ -155,7 +155,7 @@
           <div class="card__wrapper">
             <div class="card__page">
               <img src="img/bg/hr-monitor.png" alt="heart rate monitor">
-              <h3 class="card__title">Пульсометр Polar FT6</h3>
+              <h3 class="card__title">Пульсометр Polar FT1</h3>
               <span class="card__desc">Для первых шагов в тренировках, основанных на сердечном ритме</span>
               <a href="#" class="card__link">ПОДРОБНЕЕ</a>
             </div>
@@ -182,7 +182,7 @@
           <div class="card__wrapper">
             <div class="card__page">
               <img src="img/bg/hr-monitor.png" alt="heart rate monitor">
-              <h3 class="card__title">Пульсометр Polar FT6</h3>
+              <h3 class="card__title">Пульсометр Polar Pro</h3>
               <span class="card__desc">Для первых шагов в тренировках, основанных на сердечном ритме</span>
               <a href="#" class="card__link">ПОДРОБНЕЕ</a>
             </div>
@@ -209,7 +209,7 @@
           <div class="card__wrapper">
             <div class="card__page">
               <img src="img/bg/hr-monitor.png" alt="heart rate monitor">
-              <h3 class="card__title">Пульсометр Polar FT6</h3>
+              <h3 class="card__title">Пульсометр Polar JH-3</h3>
               <span class="card__desc">Для первых шагов в тренировках, основанных на сердечном ритме</span>
               <a href="#" class="card__link">ПОДРОБНЕЕ</a>
             </div>
@@ -236,7 +236,7 @@
           <div class="card__wrapper">
             <div class="card__page">
               <img src="img/bg/hr-monitor.png" alt="heart rate monitor">
-              <h3 class="card__title">Пульсометр Polar FT6</h3>
+              <h3 class="card__title">Пульсометр Polar FT4</h3>
               <span class="card__desc">Для первых шагов в тренировках, основанных на сердечном ритме</span>
               <a href="#" class="card__link">ПОДРОБНЕЕ</a>
             </div>
@@ -263,7 +263,7 @@
           <div class="card__wrapper">
             <div class="card__page">
               <img src="img/bg/hr-monitor.png" alt="heart rate monitor">
-              <h3 class="card__title">Пульсометр Polar FT6</h3>
+              <h3 class="card__title">Пульсометр Polar One</h3>
               <span class="card__desc">Для первых шагов в тренировках, основанных на сердечном ритме</span>
               <a href="#" class="card__link">ПОДРОБНЕЕ</a>
             </div>
@@ -421,22 +421,82 @@
   <footer class="footer">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.4310024054034!2d37.64599821683558!3d55.76838592746684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCAxMDcwNzg!5e0!3m2!1sru!2sru!4v1650310385061!5m2!1sru!2sru"
-      width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="footer__block">
       <address class="footer__address">Москва, Мясницкий проезд, д.3с1</address>
       <a href="tel:84999228974" class="footer__phone">8 (499) 922-89-74</a>
       <div class="footer__social">
-        <a href="#" class="footer__social-item"><img src="img/icons/fb-vector.svg" alt="facebook"
-            class="footer__social-icon"></a>
-        <a href="#" class="footer__social-item"><img src="img/icons/instagram.png" alt="instagram"
-            class="footer__social-icon"></a>
-        <a href="#" class="footer__social-item"><img src="img/icons/Pinterest.png" alt="Pinterest"
-            class="footer__social-icon"></a>
+        <a href="https://www.facebook.com/" class="footer__social-item">
+          <svg class="footer__social-icon" width="13" height="25" viewBox="0 0 13 25"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.6636 4.15104H12.9458V0.176042C12.5521 0.121875 11.1979 0 9.62085 0C6.33022 0 4.07606 2.06979 4.07606 5.87396V9.375H0.444809V13.8187H4.07606V25H8.52814V13.8198H12.0125L12.5656 9.37604H8.5271V6.31458C8.52814 5.03021 8.87397 4.15104 10.6636 4.15104Z" />
+          </svg>
+        </a>
+        <a href="https://instagram.com/" class="footer__social-item">
+          <svg class="footer__social-icon" width="24" height="24" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1_14)">
+              <path
+                d="M23.9765 7.05607C23.9203 5.78085 23.7141 4.90416 23.4187 4.14449C23.1139 3.33812 22.6451 2.61617 22.0308 2.01602C21.4307 1.40652 20.704 0.932921 19.9069 0.632936C19.1429 0.337529 18.2707 0.131312 16.9955 0.0750879C15.7108 0.0141019 15.3029 0 12.0445 0C8.78604 0 8.37819 0.0141019 7.09821 0.0703262C5.823 0.126551 4.9463 0.332951 4.18682 0.628174C3.38026 0.932922 2.65832 1.40176 2.05817 2.01602C1.44867 2.61617 0.975254 3.34288 0.675085 4.13991C0.379679 4.90416 0.173462 5.77609 0.117237 7.0513C0.0562514 8.33604 0.0421495 8.7439 0.0421495 12.0023C0.0421495 15.2608 0.0562514 15.6686 0.112476 16.9486C0.1687 18.2238 0.3751 19.1005 0.670507 19.8602C0.975254 20.6666 1.44867 21.3885 2.05817 21.9887C2.65832 22.5982 3.38503 23.0718 4.18206 23.3718C4.9463 23.6672 5.81824 23.8734 7.09364 23.9296C8.37343 23.986 8.78146 23.9999 12.0399 23.9999C15.2984 23.9999 15.7062 23.986 16.9862 23.9296C18.2614 23.8734 19.1381 23.6672 19.8976 23.3718C21.5105 22.7482 22.7857 21.4729 23.4093 19.8602C23.7045 19.096 23.9109 18.2238 23.9672 16.9486C24.0234 15.6686 24.0375 15.2608 24.0375 12.0023C24.0375 8.7439 24.0327 8.33604 23.9765 7.05607ZM21.8153 16.8549C21.7636 18.027 21.5667 18.6599 21.4026 19.0819C20.9994 20.1274 20.1695 20.9572 19.124 21.3605C18.702 21.5246 18.0645 21.7215 16.897 21.7729C15.6311 21.8293 15.2515 21.8433 12.0493 21.8433C8.84703 21.8433 8.46262 21.8293 7.20132 21.7729C6.02922 21.7215 5.39628 21.5246 4.97433 21.3605C4.45402 21.1682 3.98042 20.8634 3.596 20.4649C3.19749 20.0758 2.89274 19.6069 2.70044 19.0866C2.53635 18.6647 2.33947 18.027 2.28801 16.8596C2.2316 15.5937 2.21768 15.2139 2.21768 12.0117C2.21768 8.80946 2.2316 8.42505 2.28801 7.16394C2.33947 5.99183 2.53635 5.3589 2.70044 4.93694C2.89274 4.41645 3.19749 3.94303 3.60077 3.55843C3.98976 3.15992 4.4586 2.85517 4.97909 2.66306C5.40104 2.49896 6.03874 2.30209 7.20608 2.25044C8.47196 2.19422 8.85179 2.18011 12.0538 2.18011C15.2608 2.18011 15.6405 2.19422 16.9018 2.25044C18.0739 2.30209 18.7068 2.49896 19.1288 2.66306C19.6491 2.85517 20.1227 3.15992 20.5071 3.55843C20.9056 3.94761 21.2103 4.41645 21.4026 4.93694C21.5667 5.3589 21.7636 5.99641 21.8153 7.16394C21.8715 8.42981 21.8856 8.80946 21.8856 12.0117C21.8856 15.2139 21.8715 15.589 21.8153 16.8549Z" />
+              <path
+                d="M12.0445 5.83716C8.6408 5.83716 5.87921 8.59856 5.87921 12.0024C5.87921 15.4063 8.6408 18.1677 12.0445 18.1677C15.4483 18.1677 18.2097 15.4063 18.2097 12.0024C18.2097 8.59856 15.4483 5.83716 12.0445 5.83716ZM12.0445 16.0017C9.83634 16.0017 8.04522 14.2107 8.04522 12.0024C8.04522 9.79411 9.83634 8.00317 12.0445 8.00317C14.2528 8.00317 16.0437 9.79411 16.0437 12.0024C16.0437 14.2107 14.2528 16.0017 12.0445 16.0017Z" />
+              <path
+                d="M19.893 5.59312C19.893 6.38795 19.2485 7.03242 18.4535 7.03242C17.6587 7.03242 17.0142 6.38795 17.0142 5.59312C17.0142 4.7981 17.6587 4.15381 18.4535 4.15381C19.2485 4.15381 19.893 4.7981 19.893 5.59312Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_14">
+                <rect width="24" height="24" />
+              </clipPath>
+            </defs>
+          </svg>
+
+        </a>
+        <a href="https://www.pinterest.ru/" class="footer__social-item">
+          <svg class="footer__social-icon" width="20" height="24" viewBox="0 0 20 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.326 0C3.74699 0.001 0.249992 4.216 0.249992 8.812C0.249992 10.943 1.44099 13.602 3.34799 14.445C3.89199 14.69 3.81999 14.391 4.28799 12.601C4.32499 12.452 4.30599 12.323 4.18599 12.184C1.45999 9.031 3.65399 2.549 9.93699 2.549C19.03 2.549 17.331 15.131 11.519 15.131C10.021 15.131 8.90499 13.955 9.25799 12.5C9.68599 10.767 10.524 8.904 10.524 7.655C10.524 4.507 5.83399 4.974 5.83399 9.145C5.83399 10.434 6.28999 11.304 6.28999 11.304C6.28999 11.304 4.78099 17.4 4.50099 18.539C4.02699 20.467 4.56499 23.588 4.61199 23.857C4.64099 24.005 4.80699 24.052 4.89999 23.93C5.04899 23.735 6.87299 21.133 7.38399 19.252C7.56999 18.567 8.33299 15.787 8.33299 15.787C8.83599 16.695 10.286 17.455 11.831 17.455C16.427 17.455 19.749 13.415 19.749 8.402C19.733 3.596 15.62 0 10.326 0V0Z" />
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
+  <div class="overlay">
+    <div class="modal" id="consultation">
+      <h2 class="modal__subtitle">Просто заполните форму заявки</h2>
+      <span class="modal__desc">и мы перезвоним вам в течении 10 минут</span>
+      <form action="smart.php" method="POST" class="form-order form-order--modal">
+        <input name="name" placeholder="Ваше имя" type="text">
+        <input name="phone" placeholder="Ваш телефон" type="tel">
+        <input name="email" placeholder="Ваш E-mail" type="email">
+        <button class="button button--submit">заказать кОНСУЛЬТАЦИЮ</button>
+      </form>
+      <div class="modal__close"><img src="img/icons/button_close.svg" alt="icon-cross"></div>
+    </div>
+    <div class="modal" id="order">
+      <h2 class="modal__subtitle">Ваш заказ:</h2>
+      <span class="modal__desc">Пульсометр Polar FT1</span>
+      <form action="smart.php" method="POST" class="form-order form-order--modal">
+        <input name="name" required placeholder="Ваше имя" type="text">
+        <input name="phone" required placeholder="Ваш телефон" type="tel">
+        <input name="email" required placeholder="Ваш E-mail" type="email">
+        <button class="button button--submit">Купить</button>
+      </form>
+      <div class="modal__close"><img src="img/icons/button_close.svg" alt="icon-cross"></div>
+    </div>
+    <div class="modal modal--mini" id="thanks">
+      <h2 class="modal__subtitle">Спасибо за вашу заявку!</h2>
+      <span class="modal__desc">Наш менеджер свяжется с вами в ближайшее время!</span>
+      <div class="modal__close"><img src="img/icons/button_close.svg" alt="icon-cross"></div>
+    </div>
+  </div>
+  <a href="#up" class="pageup">
+    <img src="img/icons/page-up.svg" alt="page-up">
+  </a>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
