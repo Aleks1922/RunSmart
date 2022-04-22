@@ -28,9 +28,9 @@ $mail->addAddress('kinderLOLpingui@yandex.ru');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Данные';
+$mail->Subject = 'Новый заказ POLAR';
 $mail->Body    = '
-Пользователь оставил данные <br>
+Данные пользователя <br>
 	Имя: ' . $name . ' <br>
 	Номер телефона: ' . $phone . '<br>
 	E-mail: ' . $email . '';
